@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+    color-scheme: light dark;
+    background-image: url('./assets/imagen.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+
+body {
+    background-color: transparent;
+}
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

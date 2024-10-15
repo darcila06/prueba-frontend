@@ -1,0 +1,113 @@
+<p>CONTACTO</p>
+<form>
+    <div class="row">
+        <div class="col-sm-12 col-md-6">
+            <div class="form-group">
+                <label for="sex">Sexo<span style="color: red;">*</span>:</label>
+                <select class="form-control" name="sex" placeholder="Ingrese su sexo" [(ngModel)]="data.sex">
+                    <option disabled selected>Seleccione su sexo</option>
+                    <option value="Hombre">Hombre</option>
+                    <option value="Mujer">Mujer</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6">
+            <div class="form-group">
+                <label for="date-birthday">Fecha de nacimiento<span style="color: red;">*</span>:</label>
+                <input type="date" class="form-control" name="date-birthday"
+                    placeholder="Ingrese su Fecha de nacimiento" [(ngModel)]="data.date_birthday">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 col-md-6">
+            <div class="form-group">
+                <label for="name">Nombre<span style="color: red;">*</span>:</label>
+                <input class="form-control" name="name" placeholder="Ingrese su nombre" [(ngModel)]="data.name">
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6">
+            <div class="form-group">
+                <label for="last_name">Apellido<span style="color: red;">*</span>:</label>
+                <input class="form-control" name="last_name" placeholder="Ingrese su apellido"
+                    [(ngModel)]="data.last_name">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 col-md-12">
+            <div class="form-group">
+                <label for="email">Email<span style="color: red;">*</span>:</label>
+                <input class="form-control" name="email" placeholder="Ingrese su email" [(ngModel)]="data.email">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 col-md-12">
+            <div class="form-group">
+                <label for="addres">Dirección<span style="color: red;">*</span>:</label>
+                <input class="form-control" name="addres" placeholder="Ingrese su dirección" [(ngModel)]="data.addres">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 col-md-6">
+            <div class="form-group">
+                <label for="info">Casa/Apartamento:</label>
+                <input class="form-control" name="info" placeholder="Ingrese su Casa/Apartamento" [(ngModel)]="info">
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6">
+            <div class="form-group">
+                <label for="country">País<span style="color: red;">*</span>:</label>
+                <select class="form-control" name="country" placeholder="Seleccione su país" [(ngModel)]="data.country">
+                    <option disabled selected>Seleccione su País</option>
+                    <option value="Argentina">Argentina</option>
+                    <option value="Colombia">Colombia</option>
+                    <option value="México">México</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 col-md-6">
+            @if (data.country == "Colombia") {
+            <div class="form-group">
+                <label for="Deparment">Departamento:</label>
+                <select class="form-control" name="Deparment" placeholder="Seleccione su departamento"
+                    [(ngModel)]="data.Deparment">
+                    <option disabled selected>Seleccione su departamento</option>
+                    <option value="Caldas">Caldas</option>
+                    <option value="Cundinamarca">Cundinamarca</option>
+                    <option value="Valle">Valle</option>
+                </select>
+            </div>
+            }
+        </div>
+        <div class="col-sm-12 col-md-6">
+            <div class="form-group">
+                <label for="City">Ciudad<span style="color: red;">*</span>:</label>
+                <select class="form-control" name="City" placeholder="Seleccione su Ciudad" [(ngModel)]="data.City">
+                    <option disabled selected>Seleccione su Ciudad</option>
+                    <option value="Bogotá">Bogotá</option>
+                    <option value="Cali">Cali</option>
+                    <option value="Manizales">Manizales</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 col-md-12">
+            <div class="form-group">
+                <label for="comment">Comentarios<span style="color: red;">*</span>:</label>
+                <textarea class="form-control" name="comment" placeholder="Ingrese sus comentarios"
+                    [(ngModel)]="data.comment"></textarea>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 col-md-2">
+            <button type="submit" class="btn btn-success" (click)="onSubmit()">Enviar</button>
+        </div>
+    </div>
+</form>
